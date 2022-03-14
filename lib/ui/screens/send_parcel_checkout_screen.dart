@@ -1,0 +1,151 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
+class SendParcelCheckoutScreen extends StatelessWidget {
+  const SendParcelCheckoutScreen({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24),
+          child: ListView(
+            children: [
+              Text(
+                'Checkout',
+                style: Theme.of(context).textTheme.headline1,
+              ),
+              const SizedBox(height: 21),
+              Container(
+                height: 207,
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 19),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  color: Colors.grey.shade200,
+                  image: const DecorationImage(
+                    fit: BoxFit.fill,
+                    image: AssetImage('assets/images/'),
+                  ),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(
+                      '**** **** **** 0412',
+                      style: Theme.of(context)
+                          .textTheme
+                          .headline2
+                          ?.copyWith(color: Colors.white),
+                    ),
+                    SizedBox(
+                      height: 60,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Annie Robertson',
+                          style: Theme.of(context)
+                              .textTheme
+                              .headline4
+                              ?.copyWith(color: Colors.white),
+                        ),
+                        Text(
+                          '08/23',
+                          style: Theme.of(context)
+                              .textTheme
+                              .headline4
+                              ?.copyWith(color: Colors.white),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+      bottomSheet: _buildBottomSheet(),
+    );
+  }
+
+  Widget _buildBottomSheet() {
+    return Container(
+      padding: const EdgeInsets.all(24),
+      height: 20,
+      width: double.infinity,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.only(
+          topRight: Radius.circular(16),
+          topLeft: Radius.circular(16),
+        ),
+        color: Color(0xFFf5f5f5),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Summary',
+                style: Theme.of(context).textTheme.headline3,
+              ),
+              SizedBox(
+                width: 45,
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Text(
+                          'Edit',
+                          style: Theme.of(context).textTheme.bodyText2,
+                        ),
+                        SvgPicture.asset(''),
+                      ],
+                    ),
+                    Container(
+                      height: 1,
+                      color: Colors.black,
+                    ),
+                  ],
+                ),
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Recipient',
+                    style: Theme.of(context).textTheme.headline4,
+                  ),
+                  Text(
+                    'James May\njames.may@mail.com\n01698 852695\n11 Rosemount Meadows, Glasgow, G71 8EL',
+                    style: Theme.of(context).textTheme.headline5,
+                  ),
+                ],
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Delivery Method',
+                    style: Theme.of(context).textTheme.headline4,
+                  ),
+                  Text(
+                    'From door to door',
+                    style: Theme.of(context).textTheme.headline5,
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
