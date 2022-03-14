@@ -21,11 +21,26 @@ class SendParcelScreen extends StatelessWidget {
               style: Theme.of(context).textTheme.headline3,
             ),
             const SizedBox(height: 11),
-            MyParcelSize(
+            const MyParcelSize(
                 parcelSize: 'Small',
                 parcelSizeDescription: 'Max. 25 kg, 8 x 38 x 64 cm',
                 parcelSizeDimension: 'Fits in an envelope',
-                parcelSizeImage: '')
+                parcelSizeImage: ''),
+            const MyParcelSize(
+                parcelSize: 'Medium',
+                parcelSizeDescription: 'Max. 25 kg, 19 x 38 x 64 cm',
+                parcelSizeDimension: 'Fits in a shoe box',
+                parcelSizeImage: ''),
+            const MyParcelSize(
+                parcelSize: 'Large',
+                parcelSizeDescription: 'Max. 25 kg, 41 x 38 x 64 cm',
+                parcelSizeDimension: 'Fits in a cardboard box',
+                parcelSizeImage: ''),
+            const MyParcelSize(
+                parcelSize: 'Custom',
+                parcelSizeDescription: 'Max: 30kg or 300cm',
+                parcelSizeDimension: 'Fits on a skid',
+                parcelSizeImage: ''),
           ],
         ),
       ),

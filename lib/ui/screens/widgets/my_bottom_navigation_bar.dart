@@ -33,12 +33,12 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
         BottomNavigationBarItem(
           icon:
               _selectedIndex == 1 ? SvgPicture.asset('') : SvgPicture.asset(''),
-          label: 'My parcels',
+          label: 'Send parcel',
         ),
         BottomNavigationBarItem(
           icon:
               _selectedIndex == 2 ? SvgPicture.asset('') : SvgPicture.asset(''),
-          label: 'My parcels',
+          label: 'Parcel center',
         ),
       ],
       currentIndex: _selectedIndex,
