@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ParcelAppTheme.LightTheme,
       home: Scaffold(
-        body: SendParcelScreen(),
+        body: SendParcelDetailScreen(),
         bottomNavigationBar: const MyBottomNavigationBar(),
       ),
     );
