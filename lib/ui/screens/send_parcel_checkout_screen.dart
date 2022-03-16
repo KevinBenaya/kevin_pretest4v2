@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class SendParcelCheckoutScreen extends StatelessWidget {
+class SendParcelCheckoutScreen extends StatefulWidget {
   const SendParcelCheckoutScreen({Key? key}) : super(key: key);
 
+  @override
+  State<SendParcelCheckoutScreen> createState() => _SendParcelCheckoutScreen();
+}
+
+class _SendParcelCheckoutScreen extends State<SendParcelCheckoutScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,11 +74,11 @@ class SendParcelCheckoutScreen extends StatelessWidget {
           ),
         ),
       ),
-      //bottomSheet: _buildBottomSheet(),
+      bottomSheet: _buildBottomSheet(),
     );
   }
 
-  /*Widget _buildBottomSheet() {
+  Widget _buildBottomSheet() {
     return Container(
       padding: const EdgeInsets.all(24),
       height: 20,
@@ -146,5 +151,6 @@ class SendParcelCheckoutScreen extends StatelessWidget {
           ),
         ],
       ),
-    );*/
+    );
+  }
 }
