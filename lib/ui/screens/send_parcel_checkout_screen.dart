@@ -26,7 +26,7 @@ class SendParcelCheckoutScreen extends StatelessWidget {
                   color: Colors.grey.shade200,
                   image: const DecorationImage(
                     fit: BoxFit.fill,
-                    image: AssetImage('assets/images/'),
+                    image: AssetImage('assets/images/img_card_background.png'),
                   ),
                 ),
                 child: Column(
@@ -69,11 +69,11 @@ class SendParcelCheckoutScreen extends StatelessWidget {
           ),
         ),
       ),
-      bottomSheet: _buildBottomSheet(),
+      //bottomSheet: _buildBottomSheet(),
     );
   }
 
-  Widget _buildBottomSheet() {
+  /*Widget _buildBottomSheet() {
     return Container(
       padding: const EdgeInsets.all(24),
       height: 20,
@@ -146,6 +146,5 @@ class SendParcelCheckoutScreen extends StatelessWidget {
           ),
         ],
       ),
-    );
-  }
+    );*/
 }

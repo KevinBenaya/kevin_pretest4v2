@@ -28,11 +28,11 @@ class _SendParcelDetailScreenState extends State<SendParcelDetailScreen> {
             const SizedBox(height: 11),
             const MyParcelDeliveryMethod(
                 parcelDeliveryDuration: '1 - 2 days',
-                parcelDeliveryImage: '',
+                parcelDeliveryImage: 'assets/images/img_door_to_parcel',
                 parcelDeliveryMethod: 'From door to parcel center'),
             const MyParcelDeliveryMethod(
                 parcelDeliveryDuration: '2 - 3 days',
-                parcelDeliveryImage: '',
+                parcelDeliveryImage: 'assets/images/img_door_to_door',
                 parcelDeliveryMethod: 'From door to door	')
           ],
         ),
