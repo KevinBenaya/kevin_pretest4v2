@@ -81,7 +81,7 @@ class _SendParcelCheckoutScreen extends State<SendParcelCheckoutScreen> {
   Widget _buildBottomSheet() {
     return Container(
       padding: const EdgeInsets.all(24),
-      height: 20,
+      height: MediaQuery.of(context).size.height * 0.5,
       width: double.infinity,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.only(
